@@ -1,0 +1,75 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    font-family: 'Fjalla One', sans-serif;
+    background-image: url("img/707962.png")
+}
+
+.centralize {
+    margin: auto;
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    height: 33vh;
+}
+
+.main2 {
+    display: flex;
+    height: 33vh;
+    background-color: white;
+    border-style: groove;
+    border-width: 10px;
+    padding: 0.5px;
+}
+
+.main3 {
+    display: flex;
+    height: 33vh;
+    background-color: rgba(0, 0, 0, 0.116);
+    border-style: groove;
+    padding: 0.5px;
+}
+
+.imgProject {
+    width: 17vh;
+    height: 17vh;
+    padding-left: 15px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.295);
+    padding: 15px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#topMenu {
+    background-color: black;
+    display: flex;
+    margin: 0;
+}
+
+#topMenu li {
+    color: rgb(204, 207, 202);
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+}
+
+#topMenu li:first-child {
+    margin-right: auto;
+}
+
+.buttonColor {
+    font-family: 'Fjalla One', sans-serif;
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+    padding: 10px;
+}

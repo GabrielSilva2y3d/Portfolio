@@ -14,9 +14,16 @@
 }
 
 .navbar {
-    background-color: black;
-    color: white; 
-    
+   position: fixed;
+   width: 100%;
+   padding: 30px 0;
+   font-family: 'Ubuntu', sans-serif;
+   transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+    padding: 15px 0;
+    background: black;
 }
 
 .navbar .bar {
@@ -25,7 +32,7 @@
     justify-content: space-between;
 }
 
-.navbar-contents {
+.menu {
     list-style-type: none; 
     margin: 0;
     padding: 0; 
@@ -37,50 +44,176 @@
     font-weight: 600;
     color: white; 
 }
+.logo span {
+    color: #007FFF;
+    font-weight: 700;
+}
 
 .navbar li {
     float: left; 
 }
 
-.navbar li a {
-    display: block; 
+.navbar .menu li a {
     color: white; 
-    text-align: center; 
+    font-size: 18px;
+    font-weight: 600;
     padding: 14px 16px;
-    text-decoration: none; 
+    transition: color 0.3s ease;
 }
-.navbar li a:hover {
-    background-color: gray;
+.navbar .bar li a:hover {
+   color: #007FFF;
 }
+
+/* Menu btn styling */
+
+.menu-btn {
+    color: white;
+    font-size: 21px;
+    cursor: pointer;
+    display: none;
+}
+
 
 /* Home */
 .home {
     background: url("img/background.jpg"); 
     background-size: cover;
-    height: 100vh;
+    height: 110vh;
     padding: 50px; 
     text-align: center; 
     color: #f5f5f5
 }
 
-.avatar {
+.home .avatar {
     display: flex;
     justify-content: center;
     height: 300px;
-    margin: 10px;
+    margin: 20px;
 }
 
-.text-1 {
+.home .home-content .text-1 {
     font-size: 27px; 
 }
 
-.text-2 {
+.home .home-content .text-2 {
     font-size: 75px;
     font-weight: 600;
     margin-left: -3 ;
 } 
-.text-3 {
-    font-size: 30px; 
+.home .home-content .text-3 {
+    font-size: 40px; 
     line-height: 1.5;
     color: #f5f5f5
+}
+
+.home .home-content .text-3 span {
+    color: #007FFF;
+    font-weight: 600;
+}
+
+.home .home-content a{
+    display: inline-block;
+    background: #007FFF;
+    font-size: 25px;
+    color: white;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #007FFF;
+    transition: all 0.3s ease;
+}
+
+.home .home-content a:hover{
+    background: none;
+    color: #007FFF;
+}
+
+/* Responsive media query */
+@media (max-width: 1104px) {
+    .home {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 991px) {
+    .bar{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px) {
+    .bar{
+        padding: 0 50px;
+    }
+
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active::before{
+        content: "\f00d";
+    }
+
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+
+    .navbar .menu.active {
+        left: 0;
+    }
+
+    .navbar .menu li{
+        float: initial;
+        display: block;
+    }
+
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px; 
+    }
+
+    .home .home-content .text-2 {
+        font-size: 70px;
+    } 
+    .home .home-content .text-3 {
+        font-size: 35px; 
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+}
+
+@media (max-width: 690px) {
+    .bar {
+        padding: 0 23px;
+    }
+    .home .home-content .text-2 {
+        font-size: 60px;
+    } 
+    .home .home-content .text-3 {
+        font-size: 32px; 
+    }
+    .home .home-content a{
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .home .home-content .text-2 {
+        font-size: 50px;
+    } 
+    .home .home-content .text-3 {
+        font-size: 27px; 
+    }
 }

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -6,8 +7,8 @@
     font-family: sans-serif;
 }
 
-/* Navbar*/
-.bar {
+/* Navbar styling*/
+.max-width {
     max-width: 1300px;
     padding: 0 80px;
     margin: auto;
@@ -16,6 +17,7 @@
 .navbar {
    position: fixed;
    width: 100%;
+   z-index: 999;
    padding: 30px 0;
    font-family: 'Ubuntu', sans-serif;
    transition: all 0.3s ease;
@@ -26,7 +28,7 @@
     background: black;
 }
 
-.navbar .bar {
+.navbar .max-width {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -60,7 +62,7 @@
     padding: 14px 16px;
     transition: color 0.3s ease;
 }
-.navbar .bar li a:hover {
+.navbar .max-width li a:hover {
    color: #007FFF;
 }
 
@@ -74,7 +76,7 @@
 }
 
 
-/* Home */
+/* Home styling */
 .home {
     background: url("img/background.jpg"); 
     background-size: cover;
@@ -136,12 +138,12 @@
 }
 
 @media (max-width: 991px) {
-    .bar{
+    .max-width{
         padding: 0 50px;
     }
 }
 @media (max-width: 947px) {
-    .bar{
+    .max-width{
         padding: 0 50px;
     }
 
@@ -194,7 +196,7 @@
 }
 
 @media (max-width: 690px) {
-    .bar {
+    .max-width {
         padding: 0 23px;
     }
     .home .home-content .text-2 {
@@ -217,3 +219,101 @@
         font-size: 27px; 
     }
 }
+
+
+/* About styling */
+section {
+    padding: 100px 0;
+}
+.about {
+    padding: 100px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about .title {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.about .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+.about .title::after{
+    content: "who I am";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: #007FFF;
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+.about .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .about-content .left {
+    width: 45%;
+}
+
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border: #111 solid;
+    border-radius: 6px;
+}
+
+.about .about-content .right {
+    width: 55%;
+}
+
+.about .about-content .right .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span {
+    color: #007FFF;
+}
+.about .about-content .right p {
+    text-align: justify;
+}
+
+.about .about-content .right a {
+    display: inline-block;
+    background: #007FFF;
+    font-size: 20px;
+    color: white;
+    padding: 1px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #007FFF;
+    transition: all 0.3s ease;
+}
+
+.about .about-content .right a:hover{
+    color: #007FFF;
+    background: none;
+}
+
+
+

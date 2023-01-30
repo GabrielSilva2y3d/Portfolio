@@ -24,7 +24,7 @@
 }
 .navbar.sticky {
     padding: 15px 0;
-    background: black;
+    background: #111;
 }
 .navbar .max-width {
     display: flex;
@@ -69,6 +69,10 @@
 }
 
 /* general styling */
+section {
+    padding: 100px 0;
+    line-height: 1.5;
+}
 section .column {
     padding: 100px 0;
 }
@@ -83,7 +87,7 @@ section .title {
 section .title::before{
     content: "";
     position: absolute;
-    bottom: 0px;
+    bottom: 5px;
     left: 50%;
     width: 180px;
     height: 3px;
@@ -100,9 +104,12 @@ section .title::after{
     background: #fff;
     transform: translateX(-50%);
 }
-.about .about-content,
-.skills .skills-content {
+.about, .skills, .contact {
     font-family: 'Poppins', sans-serif;
+}
+.about .about-content,
+.skills .skills-content,
+.contact .contact-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -113,7 +120,7 @@ section .title::after{
 .home {
     background: url("img/background.jpg"); 
     background-size: cover;
-    height: 110vh;
+    height: 115vh;
     padding: 50px; 
     text-align: center; 
     color: #f5f5f5
@@ -158,10 +165,6 @@ section .title::after{
 }
 
 /* About styling */
-.about {
-    padding: 100px 0;
-    font-family: 'Poppins', sans-serif;
-}
 .about .title::after{
     content: "who I am";
 }
@@ -211,8 +214,6 @@ section .title::after{
 
 /* Skills Styling */
 .skills{
-    padding: 100px 0;
-    font-family: 'Poppins', sans-serif;
     background: black;
     color: white;
 }
@@ -221,7 +222,7 @@ section .title::after{
 }
 .skills .title::after{
     content: "what I know";
-    background: #111;
+    background: black;
 }
 .skills .skills-content .column {
     width: calc(50% - 30px);
@@ -294,7 +295,97 @@ section .title::after{
     width: 60%;
 }
 
-
+/* Contact Styling */
+.contact .title::after{
+    content: "get in touch";
+}
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+    text-align: justify;
+    margin-bottom: 15px;
+}
+.contact .contact-content .left .icon {
+    margin: 10px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: #007FFF;
+}
+.contact .contact-content .info .head{
+    font-weight: 500;
+}
+.contact .contact-content .info .sub-title{
+    color: #333;
+}
+.contact .right form .fields{
+    display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact .right form .textarea{
+    height: 80px;
+    width: 100%;
+}
+.contact .right form .name{
+    margin-right: 10px;
+}
+.contact .right form .email{
+    margin-left: 10px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+}
+.contact .right form .textarea textarea{
+    resize: none;
+    padding-top: 10px;
+}
+.contact .right form .button {
+    height: 47px;
+    width: 170px;
+}
+.contact .right form .button button {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #007FFF;
+    background:#007FFF;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.contact .right form .button button:hover{
+    background: none;
+    color: #007FFF;
+}
 
 
 /* Responsive media query */
@@ -371,7 +462,8 @@ section .title::after{
     .about .about-content .right {
         flex: 100%;
     }
-    .skills .skills-content .column{
+    .skills .skills-content .column,
+    .contact .contact-content .column{
         padding: 25px;
         width: 100%;
     }

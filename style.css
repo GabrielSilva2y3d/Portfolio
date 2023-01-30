@@ -6,11 +6,19 @@
     text-decoration: none;
     font-family: sans-serif;
 }
+body::-webkit-scrollbar {
+    width: 0.25em;
+    background-color: black;
+}
 
 .max-width {
     max-width: 1300px;
     padding: 0 80px;
     margin: auto;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 /* Navbar styling*/
@@ -50,6 +58,7 @@
     float: left; 
 }
 .navbar .menu li a {
+    display: block;
     color: white; 
     font-size: 18px;
     font-weight: 600;
@@ -66,6 +75,29 @@
     font-size: 21px;
     cursor: pointer;
     display: none;
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 47px;
+    background: #007FFF;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 /* general styling */
@@ -104,7 +136,7 @@ section .title::after{
     background: #fff;
     transform: translateX(-50%);
 }
-.about, .skills, .contact {
+.about, .skills, .contact, footer {
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
@@ -387,6 +419,19 @@ section .title::after{
     color: #007FFF;
 }
 
+/* footer styling */
+footer{
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+}
+footer span a {
+    color: #007FFF;
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
 
 /* Responsive media query */
 @media (max-width: 1300px) {
@@ -424,7 +469,6 @@ section .title::after{
         padding-top: 80px;
         transition: all 0.3s ease;
     }
-
     .navbar .menu.active {
         left: 0;
     }

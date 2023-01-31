@@ -121,7 +121,7 @@ section .title::before{
     position: absolute;
     bottom: 5px;
     left: 50%;
-    width: 180px;
+    width: 200px;
     height: 3px;
     background: #111;
     transform: translateX(-50%);
@@ -198,7 +198,7 @@ section .title::after{
 
 /* About styling */
 .about .title::after{
-    content: "who I am";
+    content: "quem eu sou";
 }
 .about .about-content .left {
     width: 45%;
@@ -246,18 +246,29 @@ section .title::after{
 
 /* Skills Styling */
 .skills{
-    background: black;
+    background: url("img/background.jpg"); 
     color: white;
 }
 .skills .title::before{
     background: #fff;
 }
 .skills .title::after{
-    content: "what I know";
+    content: "o que eu sei";
     background: black;
+}
+.skills .github{
+    display: flex;
+    margin-top: 20px;
+    padding: 0;
+    width: 100%;
+    height: 0;
+    justify-content: center;
 }
 .skills .skills-content .column {
     width: calc(50% - 30px);
+}
+.skills .skills-content .left .excerpt .hidden {
+    display: none;
 }
 .skills .skills-content .left .text {
     font-size: 20px;
@@ -312,7 +323,7 @@ section .title::after{
     background: #007FFF;
 }
 .skills .skills-content .right .html::before {
-    width: 60%;
+    width: 80%;
 }
 .skills .skills-content .right .css::before {
     width: 70%;
@@ -326,10 +337,13 @@ section .title::after{
 .skills .skills-content .right .delphi::before {
     width: 60%;
 }
+.skills .skills-content .right .python::before {
+    width: 60%;
+}
 
 /* Contact Styling */
 .contact .title::after{
-    content: "get in touch";
+    content: "entrar em contato";
 }
 .contact .contact-content .column{
     width: calc(50% - 30px);

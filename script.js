@@ -19,13 +19,13 @@ $(document).ready(function(){
 
     // typing animation script
     var typed = new Typed(".typing",{
-        strings: ["Software Developer"],
+        strings: ["Desenvolvedor de Software", "Programador"],
         typeSpeed:100,
         backSpeed:60,
         loop: true
     });
     var typed = new Typed(".typing-2",{
-        strings: ["Software Developer"],
+        strings: ["Desenvolvedor de Software", "Programador"],
         typeSpeed:100,
         backSpeed:60,
         loop: true
@@ -37,3 +37,8 @@ $(document).ready(function(){
         $('menu-btn i').toggleClass('active');
     })
 })
+
+$('.read-more-link').click(function(e) {
+    e.preventDefault();
+    $(this).prev().toggleClass('hidden');
+});

@@ -136,12 +136,13 @@ section .title::after{
     background: #fff;
     transform: translateX(-50%);
 }
-.about, .skills, .contact, footer {
+.about, .skills, .contact, .projects, footer {
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
 .skills .skills-content,
-.contact .contact-content {
+.contact .contact-content,
+.projects .project-contents {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -341,9 +342,65 @@ section .title::after{
     width: 60%;
 }
 
+
+.projects .title::before{
+    background: #000;
+}
+.projects .title::after{
+    content: "O que eu já fiz";
+} 
+.projects .project-contents{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.projects .project-box {
+    width: 300px;
+    height: 330px;
+    margin: 20px ;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.projects .project-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+}
+.projects .project-box img {
+    display: block;
+    width: 270px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.projects .project-box h3 {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.projects .project-box p {
+    font-size: 16px;
+    text-align: justify;
+}
+   
+
 /* Contact Styling */
+.contact{
+    background: url("img/background.jpg"); 
+    color: white;
+}
+.contact .title::before{
+    background: #fff;
+}
 .contact .title::after{
     content: "entrar em contato";
+    background: black;
 }
 .contact .contact-content .column{
     width: calc(50% - 30px);
@@ -376,7 +433,7 @@ section .title::after{
     font-weight: 500;
 }
 .contact .contact-content .info .sub-title{
-    color: #333;
+    color: gray;
 }
 .contact .right form .fields{
     display: flex;
@@ -410,7 +467,7 @@ section .title::after{
 }
 .contact .right form .textarea textarea{
     resize: none;
-    padding-top: 10px;
+    padding-top: 10px;  
 }
 .contact .right form .button {
     height: 47px;
@@ -435,7 +492,7 @@ section .title::after{
 
 /* footer styling */
 footer{
-    background: #111;
+    background: black;
     padding: 20px 23px;
     color: #fff;
 }
@@ -524,6 +581,15 @@ footer span a:hover{
     .contact .contact-content .column{
         padding: 25px;
         width: 100%;
+    }
+    .contact .title::after{
+        font-size: 18px;
+    }
+    .projects .project-box{
+        width: 250px;
+    }
+    .projects .project-box img{
+        width: 220px;
     }
 }
 @media (max-width: 690px) {

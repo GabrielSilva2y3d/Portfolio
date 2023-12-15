@@ -12,12 +12,10 @@ $(document).ready(function(){
         }
     })
 
-    // slide-up script
     $('.scroll-up-btn').click(function(){
         $('html').animate({scrollTop: 0});
     });
 
-    // typing animation script
     var typed = new Typed(".typing",{
         strings: ["Desenvolvedor de Software", "Programador"],
         typeSpeed:100,
@@ -25,7 +23,7 @@ $(document).ready(function(){
         loop: true
     });
     var typed = new Typed(".typing-2",{
-        strings: ["Desenvolvedor de Software", "Programador"],
+        strings: ["PHP", "Delphi", "Python"],
         typeSpeed:100,
         backSpeed:60,
         loop: true

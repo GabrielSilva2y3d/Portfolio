@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 body::-webkit-scrollbar {
     width: 0.25em;
@@ -21,7 +21,7 @@ html{
     scroll-behavior: smooth;
 }
 
-/* Navbar styling*/
+/* Navbar*/
 .navbar {
    position: fixed;
    width: 100%;
@@ -69,7 +69,7 @@ html{
    color: #007FFF;
 }
 
-/* Menu btn styling */
+/* Menu */
 .menu-btn {
     color: white;
     font-size: 21px;
@@ -100,7 +100,7 @@ html{
     pointer-events: auto;
 }
 
-/* general styling */
+/* Sections */
 section {
     padding: 100px 0;
     line-height: 1.5;
@@ -149,7 +149,7 @@ section .title::after{
     justify-content: space-between;
 }
 
-/* Home styling */
+/* Home */
 .home {
     background: url("img/background.jpg"); 
     background-size: cover;
@@ -197,7 +197,7 @@ section .title::after{
     color: #007FFF;
 }
 
-/* About styling */
+/* About */
 .about .title::after{
     content: "quem eu sou";
 }
@@ -220,13 +220,14 @@ section .title::after{
 .about .about-content .right .text {
     font-size: 25px;
     font-weight: 600;
-    margin-bottom: 10px;
 }
 .about .about-content .right .text span {
     color: #007FFF;
 }
 .about .about-content .right p {
     text-align: justify;
+    text-indent: 1.5em;
+    margin-bottom: 1.5em;
 }
 .about .about-content .right a {
     display: inline-block;
@@ -245,7 +246,7 @@ section .title::after{
     background: none;
 }
 
-/* Skills Styling */
+/* Skills */
 .skills{
     background: url("img/background.jpg"); 
     color: white;
@@ -390,7 +391,7 @@ section .title::after{
 }
    
 
-/* Contact Styling */
+/* Contact*/
 .contact{
     background: url("img/background.jpg"); 
     color: white;
@@ -490,7 +491,7 @@ section .title::after{
     color: #007FFF;
 }
 
-/* footer styling */
+/* footer */
 footer{
     background: black;
     padding: 20px 23px;
@@ -504,7 +505,6 @@ footer span a:hover{
     text-decoration: underline;
 }
 
-/* Responsive media query */
 @media (max-width: 1300px) {
     .home {
         margin-left: 0px;

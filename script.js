@@ -17,15 +17,15 @@ $(document).ready(function(){
     });
 
     var typed = new Typed(".typing",{
-        strings: ["Desenvolvedor de Software", "Programador"],
+        strings: ["Desenvolvedor de Software"],
         typeSpeed:100,
         backSpeed:60,
         loop: true
     });
     var typed = new Typed(".typing-2",{
-        strings: ["PHP", "Delphi", "Python"],
-        typeSpeed:100,
-        backSpeed:60,
+        strings: ["criativo", "apaixonado por inovação", "especializado em PHP, Delphi e Python"],
+        typeSpeed: 100,
+        backSpeed: 60,
         loop: true
     });
 

@@ -198,6 +198,9 @@ section .title::after{
 }
 
 /* About */
+.about {
+    background-color: #f5f5f5;
+}
 .about .title::after{
     content: "quem eu sou";
 }
@@ -228,6 +231,7 @@ section .title::after{
     text-align: justify;
     text-indent: 1.5em;
     margin-bottom: 1.5em;
+    font-weight: bold;
 }
 .about .about-content .right a {
     display: inline-block;
@@ -273,12 +277,13 @@ section .title::after{
     display: none;
 }
 .skills .skills-content .left .text {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 600;
     margin-bottom: 10px;
 }
 .skills .skills-content .left p {
     text-align: justify;
+    font-weight: bold;
 }
 .skills .skills-content .left a {
     display: inline-block;
@@ -343,7 +348,9 @@ section .title::after{
     width: 60%;
 }
 
-
+.projects {
+    background-color: #f5f5f5;
+}
 .projects .title::before{
     background: #000;
 }
